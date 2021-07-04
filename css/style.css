@@ -331,4 +331,8 @@ header {
 .portfolio--grid .grid-item img {
   width: 100%;
 }
+
+.portfolio--grid .grid-item h3 {
+  font-size: 1.1vw;
+}
 /*# sourceMappingURL=style.css.map */
