@@ -328,6 +328,10 @@ header {
   width: 30%;
 }
 
+.portfolio--grid .grid-item {
+  cursor: pointer;
+}
+
 .portfolio--grid .grid-item img {
   width: 100%;
 }
