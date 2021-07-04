@@ -12,10 +12,20 @@ $font-weights: (
     "regular": 400,
     "medium": 500,
     "semi-bold": 600,
-    "bold": 700
+    "bold": 700,
+    "extra-bold": 800,
+    "black": 900
 );
 
 /* COMMON CSS */
+
+.weight-black {
+    font-weight: map-get($font-weights, "black")
+}
+
+.weight-extra-bold {
+    font-weight: map-get($font-weights, extra-bold)
+}
 
 .weight-bold {
     font-weight: map-get($font-weights, bold)
@@ -42,10 +52,32 @@ $font-weights: (
 /* HERO SECTION */
 
 html, body {
-    margin: 0;
-    padding: 0 1vw;
+    margin: 0 auto;
+    width: 95vw;
     font-family: $primaryFont;
 }
+
+/*SCROLL BAR */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 header {
     padding-top: 2vh;
@@ -60,12 +92,13 @@ header {
     display: flex;
     
     &--left {
+        width: 40vw;
         position: relative;
         align-self: flex-end;
 
         img {
             margin-left: -3vw;
-            height: 90vh;
+            height: 47vw;
         }
 
         h2 {
@@ -78,8 +111,10 @@ header {
     }
 
     &--right {
+        width: 60vw;
         align-self: flex-end;
         margin-left: 2vw;
+
         ul {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
@@ -118,6 +153,172 @@ header {
     /* ABOUT */
 
     .about {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         display: flex;
+
+        &--left {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 2.5vw;
+            }
+
+            .arrow-line {
+                position: relative;
+                height: 3px;
+                width: 100%;
+                background: $accentColor;
+                margin-top: -5px;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 30px;
+                    right: -5px;
+                    top: -10px;
+                    transform: rotate(45deg);
+                    background: $accentColor;
+                }
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    height: 3px;
+                    width: 30px;
+                    right: -5px;
+                    bottom: -10px;
+                    transform: rotate(-45deg);
+                    background: $accentColor;
+                }
+            }
+
+
+            a { 
+                font-size: 1vw;
+                display: inline-block;
+                margin-top: 50px;
+                text-decoration: none;
+                color: black;
+            }
+
+            .arrow-southeast {
+                position: relative;
+                display: inline-block;
+                height: 3px;
+                width: 20px;
+                background: $accentColor;
+                transform: rotate(45deg);
+
+                &::before {
+                    position: absolute;
+                    height: 3px;
+                    width: 10px;
+                    background: $accentColor;
+                    right: 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &--right {
+            position: relative;
+            width: 60%;
+            font-size: 1.2vw;
+            letter-spacing: 1px;
+            line-height: 156.5%;
+            padding: 100px 0;
+            padding-left: 100px;
+
+            p {
+                position: inherit;
+                display: block;
+                top: 50px;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                width: 20vw;
+                top: 50px;
+                left: -3vw;
+                z-index: 0;
+            }
+        }
+    }
+
+
+    /* PORTFOLIO */
+
+    .portfolio {
+        width: 90%;
+        margin: 100px auto;
+
+        &--title {
+            position: relative;
+
+            h2 {
+                position: relative;
+                font-size: 2.5vw;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: -100px;
+                z-index: 0;
+            }
+        }
+
+        &--nav {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 15vw;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $accentColor;
+
+            label {
+                font-weight: 600;
+                font-size: 1.2vw;
+                cursor: pointer;
+            }
+
+            input {
+                display: none;
+            }
+
+            span:hover {
+                color: #747474;
+            }
+
+            span {
+                transition: 0.2s ease-in-out;
+            }
+
+            :checked + span {
+                color: $accentColor;
+            }
+        }
+
+        &--grid {
+            width: 100%;
+            margin-top: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-between;
+
+            .grid-item {
+                flex-grow: 1;
+                width: 30%;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
