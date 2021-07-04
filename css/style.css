@@ -1,12 +1,120 @@
+/* FONT */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* COLORS */
+/* FONT */
+/* COMMON CSS */
+.weight-bold {
+  font-weight: 700;
+}
+
+.weight-semi-bold {
+  font-weight: 600;
+}
+
+.weight-medium {
+  font-weight: 500;
+}
+
+.text-primary {
+  color: #221935;
+}
+
+.text-accent {
+  color: #FF9A40;
+}
+
+/* -------------- BODY ---------------- */
+/* HERO SECTION */
+html, body {
+  margin: 0;
+  padding: 0 1vw;
+  font-family: "Raleway", sans-serif;
+}
+
 header {
-  background: blue;
+  padding-top: 2vh;
+  font-size: 1.5vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: center;
-          flex-direction: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero-section {
+  height: 98vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero-section--left {
+  position: relative;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
+.hero-section--left img {
+  margin-left: -3vw;
+  height: 90vh;
+}
+
+.hero-section--left h2 {
+  color: white;
+  font-size: 5vw;
+  font-weight: 600;
+  position: absolute;
+  bottom: 2vh;
+}
+
+.hero-section--right {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-left: 2vw;
+}
+
+.hero-section--right ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25vh;
+}
+
+.hero-section--right ul li {
+  font-size: 1.5vw;
+}
+
+.hero-section--right h1 {
+  position: relative;
+  line-height: 78.5%;
+  font-weight: 600;
+  font-size: 7.5vw;
+  left: 20px;
+}
+
+.hero-section--right h1::before {
+  content: "BRENT JUDE ESPINOSA";
+  color: #FF9A40;
+  position: absolute;
+  font-size: 1.5vw;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  left: -9vw;
+  bottom: 6vw;
+}
+
+/* ABOUT */
+.about {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
