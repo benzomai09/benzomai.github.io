@@ -312,10 +312,12 @@ header {
             flex-wrap: wrap;
             align-content: space-between;
 
-            .grid-item {
-                flex-grow: 1;
+            .grid-item,
+            .grid-sizer {
                 width: 30%;
+            }
 
+            .grid-item {
                 img {
                     width: 100%;
                 }

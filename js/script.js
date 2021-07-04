@@ -1,6 +1,11 @@
 // init Isotope
 var $container = $('#container').isotope({
-    itemSelector: '.grid-item'
+    itemSelector: '.grid-item',
+    percentPosition: true,
+    masonry: {
+      columnWidth: '.grid-sizer',
+      gutter: 55
+    }
 });
 
 // filter with selects and checkboxes
