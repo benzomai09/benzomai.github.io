@@ -28,3 +28,12 @@ $checkboxes.change( function() {
 
     $container.isotope({ filter: filterValue })
 });
+
+//contact form jquery
+$( '.js-input' ).keyup(function() {
+    if( $(this).val() ) {
+       $(this).addClass('not-empty');
+    } else {
+       $(this).removeClass('not-empty');
+    }
+  });

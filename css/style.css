@@ -339,4 +339,69 @@ header {
 .portfolio--grid .grid-item h3 {
   font-size: 1.1vw;
 }
+
+/* CONTACT */
+.contact {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.contact--form form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+}
+
+.contact--form form .form-group {
+  position: relative;
+}
+
+.contact--form form .form-group .form-field {
+  display: block;
+  width: 70%;
+  height: 36px;
+  border-width: 0 0 1px 0;
+  border-color: black;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.contact--form form .form-group .form-field:focus {
+  outline: none;
+}
+
+.contact--form form .form-group .form-field.not-empty + .label {
+  -webkit-transform: translateY(-24px);
+          transform: translateY(-24px);
+}
+
+.contact--form form .form-group .label {
+  position: absolute;
+  top: 10px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  color: #8a8a8a;
+}
+
+.contact--form form .field-message {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1/4;
+}
+
+.contact--form form .field-message .form-field {
+  width: 90%;
+}
+
+.contact--form form .submit-btn {
+  cursor: pointer;
+  width: 70%;
+  -ms-grid-column: 3;
+  grid-column: 3;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
 /*# sourceMappingURL=style.css.map */

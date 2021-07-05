@@ -331,3 +331,68 @@ header {
             }
         }
     }
+
+    /* CONTACT */
+
+    .contact {
+        width: 90%;
+        margin: 0 auto;
+
+
+        &--form {
+            
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                row-gap: 50px;
+
+                .form-group {
+                    position: relative;
+    
+                    .form-field {
+                        display: block;
+                        width: 70%;
+                        height: 36px;
+                        border-width: 0 0 1px 0;
+                        border-color: black;
+                        font-size: 18px;
+                        line-height: 26px;
+                        font-weight: 400;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        &.not-empty {
+                            + .label {
+                               transform: translateY(-24px);
+                            }
+                        }
+                    }
+
+                    .label {
+                        position: absolute;
+                        top: 10px;
+                        transition: 0.2s ease-in-out;
+                        color: rgb(138, 138, 138)
+                    }
+                }
+
+
+                .field-message {
+                    grid-column: 1/4;
+                    
+                    .form-field {
+                        width: 90%;
+                    }
+                }
+
+                .submit-btn {
+                    cursor: pointer;
+                    width: 70%;
+                    grid-column: 3;
+                    grid-row: 3;
+                }
+            }      
+        }
+    }
